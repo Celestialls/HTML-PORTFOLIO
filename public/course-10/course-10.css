@@ -1,0 +1,315 @@
+:root {
+    --ink: #15110d;
+    --muted: #5f564b;
+    --cream: #fbf7f0;
+    --sand: #efe6da;
+    --forest: #395144;
+    --terracotta: #c26d3b;
+    --mist: rgba(255, 255, 255, 0.78);
+    --border: rgba(26, 23, 18, 0.12);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Manrope", "Helvetica Neue", sans-serif;
+    color: var(--ink);
+    background:
+        radial-gradient(900px 600px at 12% 8%, rgba(194, 109, 59, 0.18), transparent 60%),
+        radial-gradient(700px 500px at 88% 12%, rgba(57, 81, 68, 0.2), transparent 55%),
+        linear-gradient(140deg, var(--cream), var(--sand));
+    min-height: 100vh;
+    padding: 2.5rem 1.5rem 4rem;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.page {
+    max-width: 1150px;
+    margin: 0 auto;
+    display: grid;
+    gap: 2.5rem;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.9rem;
+}
+
+.nav a {
+    padding: 0.6rem 1.2rem;
+    border-radius: 999px;
+    background: var(--mist);
+    border: 1px solid var(--border);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nav a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 20px rgba(26, 23, 18, 0.12);
+}
+
+.badge {
+    padding: 0.25rem 0.85rem;
+    border-radius: 999px;
+    background: rgba(57, 81, 68, 0.15);
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.hero {
+    display: grid;
+    gap: 2.2rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    align-items: center;
+    padding: 2.8rem;
+    border-radius: 26px;
+    background: rgba(255, 255, 255, 0.74);
+    border: 1px solid var(--border);
+    box-shadow: 0 28px 60px rgba(26, 23, 18, 0.15);
+}
+
+.kicker {
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    font-size: 0.75rem;
+    color: var(--muted);
+    margin-bottom: 0.75rem;
+}
+
+.hero h1 {
+    font-family: "Cormorant Garamond", "Times New Roman", serif;
+    font-size: clamp(2.6rem, 4vw, 3.8rem);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.8rem;
+}
+
+.lead {
+    color: var(--muted);
+    line-height: 1.7;
+    max-width: 520px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    margin-top: 1.6rem;
+}
+
+.primary,
+.ghost {
+    padding: 0.6rem 1.4rem;
+    border-radius: 999px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.85rem;
+}
+
+.primary {
+    background: var(--forest);
+    color: #fff;
+}
+
+.ghost {
+    border: 1px solid var(--forest);
+    color: var(--forest);
+    background: transparent;
+}
+
+.hero-panel {
+    background: var(--mist);
+    border-radius: 22px;
+    padding: 1.8rem;
+    border: 1px solid var(--border);
+    display: grid;
+    gap: 0.8rem;
+}
+
+.panel-title {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--muted);
+}
+
+.hero-panel ul {
+    list-style: none;
+    display: grid;
+    gap: 0.55rem;
+    color: var(--muted);
+}
+
+.hero-panel ul li::before {
+    content: "•";
+    color: var(--terracotta);
+    margin-right: 0.5rem;
+}
+
+.panel-note {
+    color: var(--muted);
+    font-style: italic;
+}
+
+.section {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.section h2 {
+    font-family: "Cormorant Garamond", "Times New Roman", serif;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+}
+
+.section-lead {
+    color: var(--muted);
+    max-width: 720px;
+    line-height: 1.7;
+}
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.card {
+    padding: 1.6rem;
+    border-radius: 20px;
+    background: var(--mist);
+    border: 1px solid var(--border);
+    box-shadow: 0 18px 30px rgba(26, 23, 18, 0.1);
+    display: grid;
+    gap: 0.6rem;
+}
+
+.card h3 {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 1rem;
+}
+
+.card ul {
+    list-style: none;
+    display: grid;
+    gap: 0.55rem;
+    color: var(--muted);
+}
+
+.card ul li::before {
+    content: "•";
+    color: var(--terracotta);
+    margin-right: 0.5rem;
+}
+
+.modules {
+    display: grid;
+    gap: 1.2rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.module {
+    padding: 1.4rem;
+    border-radius: 18px;
+    border: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.85);
+    display: grid;
+    gap: 0.6rem;
+}
+
+.module span {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--muted);
+}
+
+.module h3 {
+    font-size: 1.1rem;
+}
+
+.module p {
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.cadence {
+    display: grid;
+    gap: 1.4rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.cadence h3 {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.9rem;
+    margin-bottom: 0.6rem;
+}
+
+.cadence ul {
+    list-style: none;
+    display: grid;
+    gap: 0.55rem;
+    color: var(--muted);
+}
+
+.cadence ul li::before {
+    content: "•";
+    color: var(--terracotta);
+    margin-right: 0.5rem;
+}
+
+.cta {
+    padding: 2rem;
+    border-radius: 22px;
+    background: linear-gradient(135deg, rgba(57, 81, 68, 0.2), rgba(194, 109, 59, 0.15));
+    border: 1px solid var(--border);
+    display: grid;
+    gap: 0.8rem;
+}
+
+.cta h2 {
+    font-family: "Cormorant Garamond", "Times New Roman", serif;
+    font-size: 2rem;
+}
+
+.cta p {
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+.cta a {
+    width: fit-content;
+    padding: 0.7rem 1.6rem;
+    border-radius: 999px;
+    background: var(--forest);
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.85rem;
+}
+
+@media (max-width: 720px) {
+    .hero {
+        padding: 2rem 1.6rem;
+    }
+
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
