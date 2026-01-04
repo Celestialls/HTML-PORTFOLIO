@@ -3,46 +3,70 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>PY Portfolio</title>
+        <title>Paterne YAO</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Source+Sans+3:wght@300;400&display=swap" rel="stylesheet">
+        <style>
+            :root {
+                --bg-light: #f6f1e9;
+                --bg-deep: #dde9e2;
+                --text: #1f1c18;
+                --ring: rgba(196, 107, 59, 0.4);
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                margin: 0;
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background:
+                    radial-gradient(1200px 600px at 20% 10%, rgba(196, 107, 59, 0.15), transparent 55%),
+                    radial-gradient(900px 500px at 85% 90%, rgba(38, 99, 85, 0.18), transparent 55%),
+                    linear-gradient(135deg, var(--bg-light), var(--bg-deep));
+                color: var(--text);
+                font-family: "Source Sans 3", "Helvetica Neue", sans-serif;
+            }
+
+            .hero {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 1.25rem;
+                text-align: center;
+                padding: 2.5rem 1.5rem;
+            }
+
+            .portrait {
+                width: clamp(180px, 32vw, 360px);
+                aspect-ratio: 1;
+                object-fit: cover;
+                border-radius: 50%;
+                border: 8px solid rgba(255, 255, 255, 0.7);
+                box-shadow:
+                    0 20px 40px rgba(31, 28, 24, 0.25),
+                    0 0 0 10px var(--ring);
+            }
+
+            .name {
+                font-family: "Playfair Display", "Times New Roman", serif;
+                font-size: clamp(2.25rem, 4vw, 3.5rem);
+                font-weight: 700;
+                letter-spacing: 0.08em;
+                text-transform: uppercase;
+                margin: 0;
+            }
+        </style>
     </head>
     <body>
-        <h1 style="color: purple;">Welcome to My Website!</h1>
-        <div style="display: flex; align-items: center;">
-            <a href="./public/about.html"><h3 style="padding-right: 1rem;">About Me</h3></a>
-            <a href="./public/contact.html" style="padding-right: 1rem;">Email 📧</a>
-            <a href="./public/contact.html">Phone 📱</a>
-        </div>
-        <a href="./public/about.html"><img src="./assets/images/DP.JPG" width="30%"  height="50%" alt="" srcset=""></a>
-        <br>
-
-
-        <hr />
-        <h2 style="color: purple;">My Projects</h2>
-        <ul>
-            <li>
-                <a href="./public/birthday-invite.html"><h3>BirthDay Invitation</h3></a>
-                <a href="./public/birthday-invite.html"><img src="./assets/images/BD.png" width="30%" height="30%" alt="" srcset=""></a>
-            </li>
-            <li>
-                <a href="./public/movie-ranking.html"><h3>Favorite Movies</h3></a>
-                <a href="./public/movie-ranking.html"><img src="./assets/images/Bmovies.png" width="30%" height="30%" alt="" srcset=""></a>
-            </li>
-        </ul>
+        <main class="hero">
+            <img class="portrait" src="./assets/images/DP.JPG" alt="Portrait of Paterne YAO">
+            <h1 class="name">Paterne YAO</h1>
+        </main>
     </body>
 </html>
-
-<!-- TODO 1: Create the HTML Boilerplate -->
-
-<!-- TODO 2: Add Your previous projects' HTML into the public folder -->
-
-<!-- TODO 3: Take screenshots of your project previews and add the images to the images folder -->
-
-<!-- TODO 4: Add titles/subtitles etc. -->
-
-<!-- TODO 5: Add a link to the project pages -->
-
-<!-- TODO 6: Add images to show the project previews
-HINT for TODO 6: You can use the height attribute set to 200 to make the image smaller:
-https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-height -->
-
-<!-- TODO 7: Add the Contact Me and About Me page links -->
